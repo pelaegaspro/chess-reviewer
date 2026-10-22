@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#F5F4F2] text-[#1A1919] font-sans min-h-screen antialiased;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  /* Design System Standardized Button Styles (4 distinct tiers) */
+
+  /* Tier 1: Primary Action (Mint Green CTA) */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 min-h-[40px] rounded-full bg-[#6CFF93] hover:bg-[#5FE683] text-[#1A1919] font-black text-xs shadow-sm transition-all active:scale-[0.98] border border-[#5FE683] disabled:opacity-50;
+  }
+
+  /* Tier 2: Secondary Action (Charcoal Black CTA) */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 min-h-[40px] rounded-full bg-[#1A1919] hover:bg-[#333232] text-white font-bold text-xs shadow-sm transition-all active:scale-[0.98] disabled:opacity-50;
+  }
+
+  /* Tier 3: Neutral Pill / Filter Button */
+  .btn-pill {
+    @apply inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 min-h-[36px] rounded-full bg-[#F5F4F2] hover:bg-white border border-[#E8E6E1] text-[#1A1919] font-bold text-xs transition-all disabled:opacity-40;
+  }
+
+  /* Tier 4: Ghost / Icon Button */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center p-2 min-h-[36px] min-w-[36px] rounded-full text-[#71706E] hover:text-[#1A1919] hover:bg-[#F5F4F2] transition-colors disabled:opacity-30;
+  }
+}
+
+/* Tabby-style minimalist smooth scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F4F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D8D6D0;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #BCBAB3;
+}

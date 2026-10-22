@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: aetherchess
+    env: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free
+    region: oregon
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: STOCKFISH_THREADS
+        value: "2"
+      - key: STOCKFISH_HASH
+        value: "128"
+

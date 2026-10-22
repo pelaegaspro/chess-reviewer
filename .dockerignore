@@ -1,0 +1,27 @@
+﻿# Dependencies
+node_modules
+client/node_modules
+server/node_modules
+
+# Build outputs
+client/dist
+server/dist
+
+# Git and logs
+.git
+.gitignore
+*.log
+npm-debug.log*
+
+# Environment and local data
+.env
+server/.env
+data/pglite_db
+*.sqlite
+*.db
+
+# Temporary & editor files
+.idea
+.vscode
+.DS_Store
+Thumbs.db
